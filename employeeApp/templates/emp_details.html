@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="container">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ object.firstName }} {{ object.lastName }}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Employee id: {{ object.id }}</h6>
+                <p class="card-text"><strong>Department:</strong> {{ object.dept }}</p>
+                <p class="card-text"><strong>Role:</strong> {{ object.role }}</p>
+                <p class="card-text"><strong>Phone:</strong> {{ object.phone }}</p>
+                <p class="card-text"><strong>Joining Date:</strong> {{ object.joining_date }}</p>
+                <p class="card-text"><strong>Location:</strong> {{ object.location }}</p>
+                <a class="btn btn-primary" href="{% url 'update' object.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'delete' object.id %}">Delete</a>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

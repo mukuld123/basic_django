@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block main %}
+<div class="content-section">
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h2>Are you sure you want to delete the employee: {{ object.id }}: {{ object.firstName }} {{ object.lastName }}</h2>
+            <div class="form-group">
+                <button class="btn btn-danger" type="submit">Confirm</button>
+                <a class="btn btn-primary" type="submit" href="{% url 'details' object.id %}">No, go back</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock main %}
