@@ -1,0 +1,12 @@
+POST http://127.0.0.1:8000/generic_details/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "firstName_21",
+    "lastName": "lastName",
+    "dept": "dept",
+    "role": "role",
+    "phone": "68722",
+    "joining_date": "2020-11-10",
+    "location": "location"
+}

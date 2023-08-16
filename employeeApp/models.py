@@ -7,7 +7,7 @@ class Employee(models.Model):
     dept = models.CharField(max_length=50)
     role = models.CharField(max_length=50)
     phone = models.IntegerField()
-    joining_date = models.DateField()
+    joining_date = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=50)
 
     def __str__(self):
